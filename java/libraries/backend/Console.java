@@ -19,6 +19,8 @@ public class Console {
     public static void WriteLine(double m)  {output("" + m + "\n");}
     public static void WriteLine(byte m)    {output("" + m + "\n");}  
 
+    public static void Clear() {output("\033[H\033[2J");}
+    
     public static void addEffect(String currentEffect) {
         switch (currentEffect) {
             case "Reset"           -> {output("\033[0m");  break;}
