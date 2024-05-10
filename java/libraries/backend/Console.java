@@ -36,7 +36,10 @@ public class Console {
         }
     }
     
-    public static void setFGColor(int[] rgb) {output("\033[38;2;" + rgb[0] + ";" + rgb[1] + ";" + rgb[2] + "m");}
-    public static void setFGColor(int r, int g, int b) {output("\033[38;2;" + r + ";" + g + ";" + b + "m");}
+    public static void setFGColor(int[] rgb) {output(String.format("\033[38;2;%d;%d;%dm", rgb[0], rgb[1], rgb[2]));}
+    public static void setFGColor(int r, int g, int b) {output(String.format("\033[38;2;%d;%d;%dm", r, g, b));}
+
+    public static void setBGColor(int[] rgb) {output(String.format("\033[48;2;%d;%d;%dm", rgb[0], rgb[1], rgb[2]));}
+    public static void setBGColor(int r, int g, int b) {output(String.format("\033[48;2;%d;%d;%dm", r, g, b));}
     
 }
