@@ -19,22 +19,18 @@ public class Console {
     public static void WriteLine(double m)  {output("" + m + "\n");}
     public static void WriteLine(byte m)    {output("" + m + "\n");}  
 
-    public static void addEffect(String[] effectsToAdd) {
-        if (effectsToAdd.length > 0) {
-            for (String currentEffect: effectsToAdd) {
-                switch (currentEffect) {
-                    case "Reset"           -> {output("\033[0m");  break;}
-                    case "Bold"            -> {output("\033[1m");  break;}
-                    case "Italize"         -> {output("\033[3m");  break;}
-                    case "Underline"       -> {output("\033[4m");  break;}
-                    case "Conceal"         -> {output("\033[8m");  break;}
-                    case "Strikethrough"   -> {output("\033[9m");  break;}
-                    case "Reveal"          -> {output("\033[28m"); break;}
-                    case "Frame"           -> {output("\033[51m"); break;}
-                    case "Encircle"        -> {output("\033[52m"); break;}
-                    case "Overline"        -> {output("\033[53m"); break;}
-                }
-            }
+    public static void addEffect(String currentEffect) {
+        switch (currentEffect) {
+            case "Reset"           -> {output("\033[0m");  break;}
+            case "Bold"            -> {output("\033[1m");  break;}
+            case "Italize"         -> {output("\033[3m");  break;}
+            case "Underline"       -> {output("\033[4m");  break;}
+            case "Conceal"         -> {output("\033[8m");  break;}
+            case "Strikethrough"   -> {output("\033[9m");  break;}
+            case "Reveal"          -> {output("\033[28m"); break;}
+            case "Frame"           -> {output("\033[51m"); break;}
+            case "Encircle"        -> {output("\033[52m"); break;}
+            case "Overline"        -> {output("\033[53m"); break;}
         }
     }
     
